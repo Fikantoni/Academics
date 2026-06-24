@@ -1,0 +1,399 @@
+{
+  "logo": "/logo.jpg",
+  "pengguna": [
+    {
+      "id": "U001",
+      "nama": "Super Admin",
+      "email": "superadmin@um-pontianak.ac.id",
+      "role": "Superadmin",
+      "status": "Aktif",
+      "password": "$2b$10$HAl8rgCEn56ZvBJlxtFXZ.JGf4d1sAqKUajjVSwWjk1QRs5FmzQne"
+    },
+    {
+      "id": "U999",
+      "nama": "Fikes Borneo",
+      "email": "fikesborneo@gmail.com",
+      "role": "Superadmin",
+      "status": "Aktif",
+      "password": "$2b$10$2p5HswbJeCHdYlKTxW4ft.iogEa4xF4k6y1xKN.YU4TgS9PBgSoju"
+    },
+    {
+      "id": "U002",
+      "nama": "Admin Tugas Akhir",
+      "email": "admin@um-pontianak.ac.id",
+      "role": "Admin",
+      "status": "Aktif",
+      "password": "$2b$10$z5sOzmph6PoyCvp874uXKeTo6yYfdojWn1TrX0y8Mh.3LTjtATNh2"
+    },
+    {
+      "id": "U008",
+      "nama": "Ketua Program Studi S2",
+      "email": "prodi@um-pontianak.ac.id",
+      "role": "Prodi",
+      "status": "Aktif",
+      "password": "$2b$10$oGmaPCFlnwfBBFzRnKu7zuQ9Z6oD7w2eVSzNCFvndfv3UEv0OFiiO"
+    },
+    {
+      "id": "U003",
+      "nama": "Dr. Budi Santoso, M.Kes",
+      "email": "dosen1@um-pontianak.ac.id",
+      "role": "Dosen",
+      "status": "Aktif",
+      "password": "$2b$10$gZgJdzbqE1GHIgLrtWBToOnj5sNOTkuJ.49i9fbfTS0Q5nxFcY60O"
+    },
+    {
+      "id": "U004",
+      "nama": "Dr. Siti Aminah, M.PH",
+      "email": "dosen2@um-pontianak.ac.id",
+      "role": "Dosen",
+      "status": "Aktif",
+      "password": "$2b$10$dP7oRZme9it7CntUWvHVd.ZvCU/p/up/3USV6tyTci1CT9RHh44gW"
+    },
+    {
+      "id": "U005",
+      "nama": "Andi Pratama",
+      "email": "mhs1@um-pontianak.ac.id",
+      "role": "Mahasiswa",
+      "status": "Aktif",
+      "password": "$2b$10$i0IguLXjxlf3M8u0TPC0a.Ue8W6HvOmIj/mV15dpcOtChnimLEXsS"
+    },
+    {
+      "id": "U006",
+      "nama": "Rina Melati",
+      "email": "mhs2@um-pontianak.ac.id",
+      "role": "Mahasiswa",
+      "status": "Aktif",
+      "password": "$2b$10$DBb9Q48ETS3lgOHXwZlIWOB6xHuvYs9j5qe5o.wx0cV/eSAEeJn7K"
+    }
+  ],
+  "mahasiswa": [
+    {
+      "id": "M001",
+      "nim": "221001",
+      "nama": "Andi Pratama",
+      "email": "mhs1@um-pontianak.ac.id",
+      "judul": "Pengaruh Sanitasi terhadap Stunting",
+      "status": "Aktif"
+    },
+    {
+      "id": "M002",
+      "nim": "221002",
+      "nama": "Rina Melati",
+      "email": "mhs2@um-pontianak.ac.id",
+      "judul": "Evaluasi Program Posyandu",
+      "status": "Aktif"
+    }
+  ],
+  "dosen": [
+    {
+      "id": "D001",
+      "nidn": "1001001",
+      "nama": "Dr. Budi Santoso, M.Kes",
+      "email": "dosen1@um-pontianak.ac.id",
+      "bidangKeahlian": "Epidemiologi",
+      "status": "Aktif"
+    },
+    {
+      "id": "D002",
+      "nidn": "1001002",
+      "nama": "Dr. Siti Aminah, M.PH",
+      "email": "dosen2@um-pontianak.ac.id",
+      "bidangKeahlian": "Kesehatan Lingkungan",
+      "status": "Aktif"
+    }
+  ],
+  "pengumuman": [
+    {
+      "id": "PENG01",
+      "judul": "Pendaftaran Sidang Tugas Akhir Gelombang 1 Pekan Ini Telah Resmi Dibuka",
+      "tanggal": "2026-06-01",
+      "aktif": true
+    }
+  ],
+  "bimbingan": [
+    {
+      "id": "BIMB01",
+      "mahasiswaId": "M001",
+      "pembimbing1": "dosen1@um-pontianak.ac.id",
+      "pembimbing2": "dosen2@um-pontianak.ac.id",
+      "penguji1": "dosen1@um-pontianak.ac.id",
+      "penguji2": "dosen2@um-pontianak.ac.id",
+      "tanggalDiassign": "2026-06-01"
+    }
+  ],
+  "judul": [
+    {
+      "id": "JUD01",
+      "mahasiswaEmail": "mhs1@um-pontianak.ac.id",
+      "namaMahasiswa": "Andi Pratama",
+      "judul": "Pengaruh Sanitasi terhadap Stunting di Pontianak",
+      "abstrak": "Penelitian ini bertujuan untuk mengevaluasi dampak kelayakan sanitasi dasar terhadap kasus stunting balita di wilayah kerja puskesmas.",
+      "status": "Disetujui",
+      "tanggal": "2462-06-01",
+      "catatan": "Lanjutkan ke penyusunan proposal Bab 1-3"
+    }
+  ],
+  "konsultasi": [],
+  "pesanSurat": [],
+  "jadwalSidang": [],
+  "pendaftaranTesis": [],
+  "aktivitas": [],
+  "dokumenTesis": [],
+  "biayaUjian": [
+    {
+      "id": "sempro",
+      "nama": "Seminar Proposal",
+      "nominal": 500000
+    },
+    {
+      "id": "semhas",
+      "nama": "Seminar Hasil",
+      "nominal": 750000
+    },
+    {
+      "id": "sidang",
+      "nama": "Sidang Akhir Tugas Akhir",
+      "nominal": 1500000
+    }
+  ],
+  "panduanSOP": [
+    {
+      "id": "PAND01",
+      "judul": "Buku Pedoman Penulisan Tugas Akhir S2 Pascasarjana",
+      "kategori": "Panduan",
+      "subKategori": "Sistematika Penulisan",
+      "deskripsi": "Buku panduan resmi format penulisan draf proposal, tugas akhir, teknik sitasi Harvard style, layout margin, ukuran font, serta tata letak abstrak dwi-bahasa Inggris & Indonesia.",
+      "fileNama": "Pedoman_Penulisan_Tugas_Akhir_Pasca_v2.pdf",
+      "fileData": "Sistem menyimpannya sebagai file template referensi resmi akademik.",
+      "tanggalInput": "2026-06-01",
+      "diunggahOleh": "Admin Tugas Akhir"
+    },
+    {
+      "id": "SOP01",
+      "judul": "SOP Alur Bimbingan & Konsultasi Tugas Akhir Berkala",
+      "kategori": "SOP",
+      "subKategori": "Bimbingan",
+      "deskripsi": "Standard Operating Procedure (SOP) pelaksanaan bimbingan tugas akhir digital maupun luring. Minimal pertemuan bimbingan draf divalidasi pembimbing adalah sebanyak 8 kali konsultasi terdokumentasi di Kartu Kendali Tesis.",
+      "fileNama": "SOP_Alur_Bimbingan_Mahasiswa_S2.pdf",
+      "fileData": "Sistem menyimpannya sebagai file template referensi resmi akademik.",
+      "tanggalInput": "2026-06-01",
+      "diunggahOleh": "Ketua Program Studi S2"
+    },
+    {
+      "id": "SOP02",
+      "judul": "SOP Pendaftaran Kelayakan Sidang Akhir Tugas Akhir",
+      "kategori": "SOP",
+      "subKategori": "Sidang Tugas Akhir",
+      "deskripsi": "SOP proses operasional dan berkas persetujuan syarat maju Sidang Akhir Tugas Akhir meliputi penyerahan berkas bebas pustaka, bukti ACC Pembimbing 1 dan Pembimbing 2, draf lolos turnitin maksimal 25%, dan slip bukti lunas pendaftaran ujian.",
+      "fileNama": "SOP_Pendaftaran_Sidang_Tugas_Akhir_S2.pdf",
+      "fileData": "Sistem menyimpannya sebagai file template referensi resmi akademik.",
+      "tanggalInput": "2026-06-03",
+      "diunggahOleh": "Admin Tugas Akhir"
+    }
+  ],
+  "printedDocs": [],
+  "pengaturan": [
+    {
+      "id": "dekan_nama",
+      "value": "Ismael Saleh, S.K.M., M.Sc."
+    },
+    {
+      "id": "dekan_nidn",
+      "value": "0411030052"
+    },
+    {
+      "id": "dekan_jabatan",
+      "value": "Dekan Fakultas Ilmu Kesehatan dan Psikologi"
+    },
+    {
+      "id": "wa_status",
+      "value": "Nonaktif"
+    },
+    {
+      "id": "wa_gateway_provider",
+      "value": "Fonnte"
+    },
+    {
+      "id": "wa_token",
+      "value": ""
+    },
+    {
+      "id": "wa_sender_no",
+      "value": ""
+    },
+    {
+      "id": "wa_template_mhs",
+      "value": "Yth. {nama}, Jadwal {kegiatan} Anda telah terbit. Tanggal: {tanggal}, Jam: {waktu} WIB, Ruang: {ruang}. Harap bersiap menghadapi ujian. Link Meet: {link}"
+    },
+    {
+      "id": "wa_template_dosen",
+      "value": "Yth. Dr/Bapak/Ibu {nama}, Mohon kehadirannya selaku dewan penguji pada Jadwal {kegiatan} Mahasiswa {mahasiswa} ({nim}). Tanggal: {tanggal}, Jam: {waktu} WIB, Ruang: {ruang}. Link Meet: {link}"
+    },
+    {
+      "id": "wa_template_audiens",
+      "value": "INFO PASCA: Hadirilah & saksikan Seminar/Sidang {kegiatan} Mahasiswa: {mahasiswa} pada Tanggal: {tanggal}, Jam: {waktu} WIB di {ruang} sebagai bekal persiapan ujian Anda!"
+    },
+    {
+      "id": "link_akademik_s1_psikologi",
+      "value": ""
+    },
+    {
+      "id": "link_akademik_s1_kesmas",
+      "value": ""
+    },
+    {
+      "id": "link_akademik_s2_kesmas",
+      "value": ""
+    },
+    {
+      "id": "link_ta_s1_psikologi",
+      "value": ""
+    },
+    {
+      "id": "link_ta_s1_kesmas",
+      "value": ""
+    },
+    {
+      "id": "link_ta_s2_kesmas",
+      "value": ""
+    },
+    {
+      "id": "link_magang_s1_psikologi",
+      "value": ""
+    },
+    {
+      "id": "link_magang_s1_kesmas",
+      "value": ""
+    },
+    {
+      "id": "link_magang_s2_kesmas",
+      "value": ""
+    },
+    {
+      "id": "link_pbl1_s1_kesmas",
+      "value": ""
+    },
+    {
+      "id": "link_pbl2_s1_kesmas",
+      "value": ""
+    }
+  ],
+  "helpdeskTiket": [
+    {
+      "id": "TKT_001",
+      "mahasiswaEmail": "mhs1@um-pontianak.ac.id",
+      "namaMahasiswa": "Andi Pratama",
+      "kategori": "Sistem",
+      "subjek": "Gagal unggah draf proposal tugas akhir",
+      "deskripsi": "Ketika mencoba mengunggah draf proposal berukuran 8MB, sistem menunjukkan Putus Koneksi / Error. Apakah ada batas ukuran file?",
+      "urgensi": "Tinggi",
+      "tanggal": "2026-06-05",
+      "status": "Selesai",
+      "tanggapan": "Halo Andi, batas upload adalah 10MB. File Anda berhasil kami terima melalui verifikasi manual admin. Solusi: Hubungi helpdesk jika masih terus berulang.",
+      "tanggapanOleh": "superadmin@um-pontianak.ac.id",
+      "tanggalTanggapan": "2026-06-06"
+    },
+    {
+      "id": "TKT_002",
+      "mahasiswaEmail": "mhs2@um-pontianak.ac.id",
+      "namaMahasiswa": "Rina Melati",
+      "kategori": "Administrasi",
+      "subjek": "Tanya batas waktu validasi nilai bimbingan",
+      "deskripsi": "Saya sudah mengirim draf perbaikan, tetapi paraf persetujuan nilai akhir di dasbor masih Menunggu. Berapa lama durasinya?",
+      "urgensi": "Sedang",
+      "tanggal": "2026-06-11",
+      "status": "Terbuka"
+    }
+  ],
+  "tahunAkademik": [
+    {
+      "id": "TA_01",
+      "nama": "Ganjil 2025/2026",
+      "status": "Aktif",
+      "tanggalMulai": "2025-09-01",
+      "tanggalSelesai": "2026-02-28"
+    },
+    {
+      "id": "TA_02",
+      "nama": "Genap 2024/2025",
+      "status": "Arsip",
+      "tanggalMulai": "2025-03-01",
+      "tanggalSelesai": "2025-08-31"
+    }
+  ],
+  "arsipSurat": [
+    {
+      "id": "ARS_001",
+      "nomorSurat": "005/II.3.AU.15/F/FIKPsi/2026",
+      "judulSurat": "Surat Undangan Rapat Kerja Fakultas",
+      "jenis": "Masuk",
+      "pengirimOrPenerima": "Rektorat Universitas Muhammadiyah Pontianak",
+      "tanggalSurat": "2026-06-10",
+      "tanggalArsip": "2026-06-11",
+      "kategori": "Undangan",
+      "keterangan": "Rapat koordinasi kurikulum fakultas di Aula Gedung B."
+    },
+    {
+      "id": "ARS_002",
+      "nomorSurat": "120/II.3.AU.15/K/FIKPsi/2026",
+      "judulSurat": "Surat Tugas Dosen Pembimbing Lapangan",
+      "jenis": "Keluar",
+      "pengirimOrPenerima": "Puskesmas Kecamatan Pontianak Selatan",
+      "tanggalSurat": "2026-06-15",
+      "tanggalArsip": "2026-06-15",
+      "kategori": "Tugas",
+      "keterangan": "Surat tugas pendampingan magang mahasiswa."
+    }
+  ],
+  "nomorSuratKeluar": [
+    {
+      "id": "NOM_001",
+      "nomorUrut": 1,
+      "nomorSuratLengkap": "001/II.3.AU.15/K/FIKPsi/2026",
+      "perihal": "Surat Pengantar Magang",
+      "tujuan": "Dinas Kesehatan Kota Pontianak",
+      "tanggalPembuatan": "2026-01-05",
+      "pembuat": "Admin Tugas Akhir",
+      "kategori": "Surat Pengantar"
+    },
+    {
+      "id": "NOM_002",
+      "nomorUrut": 2,
+      "nomorSuratLengkap": "002/II.3.AU.15/K/FIKPsi/2026",
+      "perihal": "Surat Keterangan Aktif Kuliah",
+      "tujuan": "Bank Kalbar Cabang Syariah",
+      "tanggalPembuatan": "2026-01-10",
+      "pembuat": "Admin Tugas Akhir",
+      "kategori": "Surat Keterangan"
+    }
+  ],
+  "peminjamanAlat": [
+    {
+      "id": "PIN_001",
+      "mahasiswaEmail": "mhs1@um-pontianak.ac.id",
+      "namaMahasiswa": "Andi Pratama",
+      "nimMahasiswa": "221001",
+      "namaAlat": "Mikroskop Binokuler Olympus CX23",
+      "jumlah": 2,
+      "tanggalPinjam": "2026-06-12",
+      "tanggalKembali": "2026-06-16",
+      "tujuanPenggunaan": "Penelitian sampel bakteri air bersih untuk tugas akhir.",
+      "status": "Dikembalikan",
+      "catatan": "Kondisi lensa bersih dan lengkap.",
+      "petugasApprove": "Admin Tugas Akhir"
+    },
+    {
+      "id": "PIN_002",
+      "mahasiswaEmail": "mhs2@um-pontianak.ac.id",
+      "namaMahasiswa": "Rina Melati",
+      "nimMahasiswa": "221002",
+      "namaAlat": "Timbangan Analitik Shimadzu",
+      "jumlah": 1,
+      "tanggalPinjam": "2026-06-20",
+      "tanggalKembali": "2026-06-25",
+      "tujuanPenggunaan": "Praktikum uji kadar kelembaban sampel tanah.",
+      "status": "Menunggu",
+      "catatan": ""
+    }
+  ]
+}

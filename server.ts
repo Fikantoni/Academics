@@ -64,7 +64,7 @@ app.use(express.json({ limit: "50mb" }));
 
 // Helper seed data in case db.json is missing or corrupted
 const DEFAULT_SEED_DATA = {
-  logo: null,
+  logo: "/logo.jpg",
   pengguna: [
     {
       "id": "U001",
@@ -712,18 +712,67 @@ function readDB() {
   }
 }
 
-// Low-latency memory-cached write queue that updates state immediately and enqueues safe execution on disk
+// Low-latency memory-cached write queue that updates state immediately and enqueues debounced safe execution on disk
+let saveTimeout: NodeJS.Timeout | null = null;
+let lastSaveTime = 0;
+const SAVE_DEBOUNCE_MS = 1500;
+const SAVE_MAX_DELAY_MS = 5000;
+
 function writeDB(data: any) {
   // Update state in active memory instantly so that readers immediately get the updated state
   cachedDbState = data;
 
-  // Add file persistence task to our lock-free promise chain
-  writeQueuePromise = writeQueuePromise.then(() => {
-    return atomicWriteDisk(data);
-  }).catch((queueErr) => {
-    console.error("Error in serialized async disk writer queue step:", queueErr);
-  });
+  if (saveTimeout) {
+    clearTimeout(saveTimeout);
+  }
+
+  const now = Date.now();
+  const timeSinceLastSave = now - lastSaveTime;
+
+  const performSave = () => {
+    lastSaveTime = Date.now();
+    saveTimeout = null;
+
+    writeQueuePromise = writeQueuePromise.then(() => {
+      return atomicWriteDisk(cachedDbState);
+    }).catch((queueErr) => {
+      console.error("Error in serialized async disk writer queue step:", queueErr);
+    });
+  };
+
+  if (timeSinceLastSave >= SAVE_MAX_DELAY_MS) {
+    performSave();
+  } else {
+    saveTimeout = setTimeout(performSave, SAVE_DEBOUNCE_MS);
+  }
 }
+
+// Flush pending changes before process exits
+process.on("SIGINT", () => {
+  if (saveTimeout && cachedDbState) {
+    console.log("SIGINT received: flushing pending database changes to disk...");
+    try {
+      fs.writeFileSync(DB_PATH, JSON.stringify(cachedDbState, null, 2), "utf-8");
+      console.log("Database successfully flushed.");
+    } catch (err) {
+      console.error("Error flushing database on exit:", err);
+    }
+  }
+  process.exit(0);
+});
+
+process.on("SIGTERM", () => {
+  if (saveTimeout && cachedDbState) {
+    console.log("SIGTERM received: flushing pending database changes to disk...");
+    try {
+      fs.writeFileSync(DB_PATH, JSON.stringify(cachedDbState, null, 2), "utf-8");
+      console.log("Database successfully flushed.");
+    } catch (err) {
+      console.error("Error flushing database on exit:", err);
+    }
+  }
+  process.exit(0);
+});
 
 // ========== AUTH MIDDLEWARE ==========
 
