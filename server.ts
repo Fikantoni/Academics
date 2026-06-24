@@ -553,6 +553,18 @@ function readDB() {
   try {
     let parsed: any = {};
     if (!fs.existsSync(DB_PATH)) {
+      const fallbackSrc = path.join(process.cwd(), "db.json");
+      if (process.env.VERCEL && fs.existsSync(fallbackSrc)) {
+        console.log("On Vercel: Initializing /tmp/db.json from project root db.json");
+        try {
+          fs.copyFileSync(fallbackSrc, DB_PATH);
+        } catch (copyErr) {
+          console.error("Failed to copy project db.json to /tmp/db.json:", copyErr);
+        }
+      }
+    }
+
+    if (!fs.existsSync(DB_PATH)) {
       console.log("db.json not found, creating from default robust seeds...");
       parsed = DEFAULT_SEED_DATA;
       try {
