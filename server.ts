@@ -1,7 +1,6 @@
 import express from "express";
 import path from "path";
 import fs from "fs";
-import { createServer as createViteServer } from "vite";
 import dotenv from "dotenv";
 import { GoogleGenAI } from "@google/genai";
 import bcrypt from "bcryptjs";
@@ -1465,7 +1464,8 @@ async function startServer() {
   if (!isProduction) {
     try {
       console.log("Starting server in DEVELOPMENT mode with Vite Middleware.");
-      const vite = await createViteServer({
+      const { createServer } = await import("vite");
+      const vite = await createServer({
         server: { middlewareMode: true },
         appType: "spa",
       });
